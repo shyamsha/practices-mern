@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+
+            <td>one</td>
+            <td>one</td>
+            <td>one</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>two</td>
+            <td>two</td>
+            <td>two</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>three</td>
+            <td>three</td>
+            <td>three</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>four</td>
+            <td>four</td>
+            <td>four</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <script>
+        // get the content of the first row, second cell
+        let table = document.body.firstElementChild
+        const ta = document.getElementById('table')
+        ta.border = 1
+        count1 = table.rows.length - 1
+        for (let i = 0; i < table.rows.length; i++) {
+            table.rows[i].cells[i].style.color = 'red'
+            table.rows[i].cells[count1].style.color = 'blue'
+            count1--
+        }
+
+        count = 0
+
+        // for (let j = table.rows.length - 1; j >= 0; j--) {
+        //     table.rows[count].cells[j].style.color = 'blue'
+        //     count++;
+        // }
+    </script>
+
+</body>
+
+</html>

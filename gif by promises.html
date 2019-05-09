@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GIF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <p></p>
+
+    <script>
+        let para = document.getElementsByTagName('p')
+        // const image = document.createElement('img')
+        let url = 'http://api.giphy.com/v1/gifs/trending?api_key=F8Xnxti176oKdKEZ7tcTPEz8ahfAWgzh&limit=10&rating=G'
+        let url2 = 'http://api.giphy.com/v1/gifs/trending?api_key=F8Xnxti176oKdKEZ7tcTPEz8ahfAWgzh&limit=10&rating=G'
+
+        fetch(url).then(responce => {
+                return responce.json()
+
+            }).then((data) => {
+
+                json = data.data
+
+                for (let i = 0; i < json.length; i++) {
+                    let image = document.createElement('img')
+                    para[0].innerText = 'sHyaM'
+                    image.src = json[i].images.fixed_height_still.url
+                    const br = document.createElement('br')
+                    document.body.appendChild(br)
+                    document.body.appendChild(image)
+                }
+                return fetch(url2)
+            })
+            .then((responce) => {
+                return responce.json()
+            }).then((data) => {
+                json = data.data
+                console.log(json)
+                for (let i = 0; i < json.length; i++) {
+                    let image = document.createElement('img')
+                    para[0].innerText = 'sHyaM'
+                    image.src = json[i].images.fixed_height_still.url;
+                    const br = document.createElement('br');
+                    document.body.appendChild(br)
+                    document.body.appendChild(image)
+                }
+
+            })
+    </script>
+</body>
+
+</html>

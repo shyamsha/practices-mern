@@ -1,11 +1,11 @@
- //console.log(name) //undefined only declartion hoisted not assignment
+ //console.log(name) //undefined only declaration hoisted not assignment
  // var name = 'abc'
 
 var i = 'f'
 for (let i = 0; i < 3; i++) {
     console.log(i);
     setTimeout(function () {
-        console.log(i); //everthing 3
+        console.log(i); //everting 3
     }, 0)
 
  }
@@ -17,7 +17,7 @@ for (let i = 0; i < 3; i++) {
  // console.log(j);
  // let j = 'f'
  // for (let j = 0; j < 3; j++) {
- //     console.log(j); //0,1,2//nothoisted
+ //     console.log(j); //0,1,2//not hoisted
  // }
  // console.log(j); //f
  // function hey() {
